@@ -2,11 +2,13 @@
   "name": "mini-rollup-plugin-alias",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "rollup -c rollup.config.js"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +32,9 @@
     "typescript": "*"
   },
   "config": {
+    "cz-customizable": {
+      "config": "./.cz-config.cjs"
+    },
     "commitizen": {
       "path": "node_modules/cz-customizable"
     }
@@ -43,5 +48,8 @@
     "src/**/*.{js,ts}": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^11.0.0"
   }
 }
