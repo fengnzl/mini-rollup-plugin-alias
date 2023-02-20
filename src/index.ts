@@ -8,7 +8,10 @@ export function alias(options: AliasOptions): Plugin {
   return {
     name: 'alias',
     resolveId(source, importer, options) {
-      console.log(entries)
+      console.log('resolve', source, importer, entries)
+      if (source === '@/add') {
+        return './utils/add.js'
+      }
       return source
     }
   }

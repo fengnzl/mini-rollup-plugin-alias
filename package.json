@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c ./rollup.config.js"
   },
   "keywords": [],
   "author": "",
