@@ -11,9 +11,15 @@ export default defineConfig({
   },
   plugins: [
     alias({
-      entries: {
-        '@': './utils'
-      }
+      // entries: {
+      //   '@': './utils'
+      // }
+      entries: [
+        {
+          find: '@',
+          replacement: './utils'
+        }
+      ]
     }),
   ]
 })
