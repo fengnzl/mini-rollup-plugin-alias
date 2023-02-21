@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "build": "rollup -c ./rollup.config.js"
@@ -29,7 +29,8 @@
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "rollup": "^3.15.0",
-    "typescript": "*"
+    "typescript": "*",
+    "vitest": "^0.28.5"
   },
   "config": {
     "cz-customizable": {

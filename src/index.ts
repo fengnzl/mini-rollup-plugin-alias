@@ -8,9 +8,9 @@ export function alias(options: AliasOptions): Plugin {
   return {
     name: 'alias',
     resolveId(source, importer, options) {
-      console.log('resolve', source, importer, entries)
-      if (source === '@/add') {
-        return './utils/add.js'
+      const key = Object.keys(entries).find((e) => source.startsWith(e))
+      if (key != null) {
+        return source.replace(key, entries[key]) + '.js'
       }
       return source
     }
